@@ -23,7 +23,7 @@ public @interface Modular {
     Class<?>[] basePackageClasses() default {};
 
     @AliasFor(annotation = ComponentScan.class)
-    Class<? extends BeanNameGenerator> nameGenerator() default BeanNameGenerator.class;
+    Class<? extends BeanNameGenerator> nameGenerator() default FullyQualifiedAnnotationBeanNameGenerator.class;
 
     @AliasFor(annotation = ComponentScan.class)
     Class<? extends ScopeMetadataResolver> scopeResolver() default AnnotationScopeMetadataResolver.class;
